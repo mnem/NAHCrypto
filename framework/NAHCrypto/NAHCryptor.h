@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol NAHCryptor <NSObject>
 
-- (NSData *)encrypt:(NSData *)clearData;
-- (NSData *)decrypt:(NSData *)encryptedData;
+- (nullable NSData *)encrypt:(NSData *)clearData error:(NSError **)error;
+- (nullable NSData *)decrypt:(NSData *)encryptedData error:(NSError **)error;
 
 @end
 

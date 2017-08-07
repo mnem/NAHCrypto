@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0AB4921F3918C6003D26DF /* NAHInitializationVectorGenerating.h in Headers */ = {isa = PBXBuildFile; fileRef = BB0AB4911F3918C6003D26DF /* NAHInitializationVectorGenerating.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB0AB4951F39194D003D26DF /* NAHRandomInitializationVector.h in Headers */ = {isa = PBXBuildFile; fileRef = BB0AB4931F39194D003D26DF /* NAHRandomInitializationVector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB0AB4961F39194D003D26DF /* NAHRandomInitializationVector.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0AB4941F39194D003D26DF /* NAHRandomInitializationVector.m */; };
+		BB41DC351F392228007CA519 /* NAHStringPasswordKeyProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = BB41DC331F392228007CA519 /* NAHStringPasswordKeyProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB41DC361F392228007CA519 /* NAHStringPasswordKeyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BB41DC341F392228007CA519 /* NAHStringPasswordKeyProvider.m */; };
 		BBEF59D91F31340000E3E84C /* NAHCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEF59CF1F31340000E3E84C /* NAHCrypto.framework */; };
 		BBEF59DE1F31340000E3E84C /* NAHCryptoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEF59DD1F31340000E3E84C /* NAHCryptoTests.m */; };
 		BBEF59E01F31340000E3E84C /* NAHCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = BBEF59D21F31340000E3E84C /* NAHCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BBF917171F3135CB006FE52A /* NAHEcho.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF917151F3135CB006FE52A /* NAHEcho.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BBF917181F3135CB006FE52A /* NAHEcho.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF917161F3135CB006FE52A /* NAHEcho.m */; };
 		BBF9171A1F313AAE006FE52A /* NAHCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF917191F313AAE006FE52A /* NAHCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBF9171C1F33DB12006FE52A /* NAHKeyProviding.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF9171B1F33DB12006FE52A /* NAHKeyProviding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBF9171F1F33DD29006FE52A /* NAHAESCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF9171D1F33DD29006FE52A /* NAHAESCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBF917201F33DD29006FE52A /* NAHAESCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF9171E1F33DD29006FE52A /* NAHAESCryptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,15 +32,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB0AB4911F3918C6003D26DF /* NAHInitializationVectorGenerating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHInitializationVectorGenerating.h; sourceTree = "<group>"; };
+		BB0AB4931F39194D003D26DF /* NAHRandomInitializationVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHRandomInitializationVector.h; sourceTree = "<group>"; };
+		BB0AB4941F39194D003D26DF /* NAHRandomInitializationVector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHRandomInitializationVector.m; sourceTree = "<group>"; };
+		BB41DC331F392228007CA519 /* NAHStringPasswordKeyProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHStringPasswordKeyProvider.h; sourceTree = "<group>"; };
+		BB41DC341F392228007CA519 /* NAHStringPasswordKeyProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHStringPasswordKeyProvider.m; sourceTree = "<group>"; };
 		BBEF59CF1F31340000E3E84C /* NAHCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NAHCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEF59D21F31340000E3E84C /* NAHCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHCrypto.h; sourceTree = "<group>"; };
 		BBEF59D31F31340000E3E84C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBEF59D81F31340000E3E84C /* NAHCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NAHCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEF59DD1F31340000E3E84C /* NAHCryptoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHCryptoTests.m; sourceTree = "<group>"; };
 		BBEF59DF1F31340000E3E84C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBF917151F3135CB006FE52A /* NAHEcho.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHEcho.h; sourceTree = "<group>"; };
-		BBF917161F3135CB006FE52A /* NAHEcho.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHEcho.m; sourceTree = "<group>"; };
 		BBF917191F313AAE006FE52A /* NAHCryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHCryptor.h; sourceTree = "<group>"; };
+		BBF9171B1F33DB12006FE52A /* NAHKeyProviding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHKeyProviding.h; sourceTree = "<group>"; };
+		BBF9171D1F33DD29006FE52A /* NAHAESCryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHAESCryptor.h; sourceTree = "<group>"; };
+		BBF9171E1F33DD29006FE52A /* NAHAESCryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHAESCryptor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB0AB48F1F391814003D26DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBEF59D31F31340000E3E84C /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB0AB4901F391850003D26DF /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				BBF9171D1F33DD29006FE52A /* NAHAESCryptor.h */,
+				BBF9171E1F33DD29006FE52A /* NAHAESCryptor.m */,
+				BB0AB4931F39194D003D26DF /* NAHRandomInitializationVector.h */,
+				BB0AB4941F39194D003D26DF /* NAHRandomInitializationVector.m */,
+				BB41DC331F392228007CA519 /* NAHStringPasswordKeyProvider.h */,
+				BB41DC341F392228007CA519 /* NAHStringPasswordKeyProvider.m */,
+			);
+			path = Concrete;
+			sourceTree = "<group>";
+		};
 		BBEF59C51F31340000E3E84C = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +110,12 @@
 		BBEF59D11F31340000E3E84C /* NAHCrypto */ = {
 			isa = PBXGroup;
 			children = (
-				BBEF59D31F31340000E3E84C /* Info.plist */,
+				BB0AB4901F391850003D26DF /* Concrete */,
 				BBEF59D21F31340000E3E84C /* NAHCrypto.h */,
-				BBF917151F3135CB006FE52A /* NAHEcho.h */,
-				BBF917161F3135CB006FE52A /* NAHEcho.m */,
 				BBF917191F313AAE006FE52A /* NAHCryptor.h */,
+				BB0AB4911F3918C6003D26DF /* NAHInitializationVectorGenerating.h */,
+				BBF9171B1F33DB12006FE52A /* NAHKeyProviding.h */,
+				BB0AB48F1F391814003D26DF /* Supporting Files */,
 			);
 			path = NAHCrypto;
 			sourceTree = "<group>";
@@ -103,8 +137,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBEF59E01F31340000E3E84C /* NAHCrypto.h in Headers */,
+				BBF9171F1F33DD29006FE52A /* NAHAESCryptor.h in Headers */,
+				BBF9171C1F33DB12006FE52A /* NAHKeyProviding.h in Headers */,
 				BBF9171A1F313AAE006FE52A /* NAHCryptor.h in Headers */,
-				BBF917171F3135CB006FE52A /* NAHEcho.h in Headers */,
+				BB0AB4951F39194D003D26DF /* NAHRandomInitializationVector.h in Headers */,
+				BB0AB4921F3918C6003D26DF /* NAHInitializationVectorGenerating.h in Headers */,
+				BB41DC351F392228007CA519 /* NAHStringPasswordKeyProvider.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF917181F3135CB006FE52A /* NAHEcho.m in Sources */,
+				BB41DC361F392228007CA519 /* NAHStringPasswordKeyProvider.m in Sources */,
+				BBF917201F33DD29006FE52A /* NAHAESCryptor.m in Sources */,
+				BB0AB4961F39194D003D26DF /* NAHRandomInitializationVector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +386,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NAHCrypto/Info.plist;
+				INFOPLIST_FILE = "NAHCrypto/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.noiseandheat.ios.NAHCrypto;
@@ -365,7 +405,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NAHCrypto/Info.plist;
+				INFOPLIST_FILE = "NAHCrypto/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.noiseandheat.ios.NAHCrypto;
