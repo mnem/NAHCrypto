@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "NAHCryptor.h"
 #import "NAHKeyProviding.h"
-#import "NAHInitializationVectorGenerating.h"
+#import "NAHIVGenerating.h"
 
 @interface NAHAESCryptor : NSObject <NAHCryptor>
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithKeyProvider:(id<NAHKeyProviding>)keyProvider initializationVectorGenerator:(id<NAHInitializationVectorGenerating>)ivGenerator;
+- (instancetype)initWithKeyProvider:(id<NAHKeyProviding>)keyProvider initializationVectorGenerator:(id<NAHIVGenerating>)ivGenerator;
 
 @end

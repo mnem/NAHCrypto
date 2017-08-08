@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NAHEncryptedMessage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol NAHCryptor <NSObject>
 
-- (nullable NSData *)encrypt:(NSData *)clearData error:(NSError **)error;
-- (nullable NSData *)decrypt:(NSData *)encryptedData error:(NSError **)error;
+- (nullable NAHEncryptedMessage *)encrypt:(NSData *)clearData error:(NSError **)error;
+- (nullable NSData *)decrypt:(NAHEncryptedMessage *)encryptedData error:(NSError **)error;
 
 @end
 

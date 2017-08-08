@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB0AB4921F3918C6003D26DF /* NAHInitializationVectorGenerating.h in Headers */ = {isa = PBXBuildFile; fileRef = BB0AB4911F3918C6003D26DF /* NAHInitializationVectorGenerating.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB0AB4951F39194D003D26DF /* NAHRandomInitializationVector.h in Headers */ = {isa = PBXBuildFile; fileRef = BB0AB4931F39194D003D26DF /* NAHRandomInitializationVector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB0AB4961F39194D003D26DF /* NAHRandomInitializationVector.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0AB4941F39194D003D26DF /* NAHRandomInitializationVector.m */; };
-		BB41DC351F392228007CA519 /* NAHStringPasswordKeyProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = BB41DC331F392228007CA519 /* NAHStringPasswordKeyProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB0AB4921F3918C6003D26DF /* NAHIVGenerating.h in Headers */ = {isa = PBXBuildFile; fileRef = BB0AB4911F3918C6003D26DF /* NAHIVGenerating.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB0AB4951F39194D003D26DF /* NAHRandomIVGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = BB0AB4931F39194D003D26DF /* NAHRandomIVGenerator.h */; };
+		BB0AB4961F39194D003D26DF /* NAHRandomIVGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0AB4941F39194D003D26DF /* NAHRandomIVGenerator.m */; };
+		BB41DC351F392228007CA519 /* NAHStringPasswordKeyProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = BB41DC331F392228007CA519 /* NAHStringPasswordKeyProvider.h */; };
 		BB41DC361F392228007CA519 /* NAHStringPasswordKeyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BB41DC341F392228007CA519 /* NAHStringPasswordKeyProvider.m */; };
+		BB9905341F3A64DC003B6169 /* NAHRandomIVGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9905331F3A64DC003B6169 /* NAHRandomIVGeneratorTests.m */; };
+		BB9905361F3A69B9003B6169 /* NAHStringPasswordKeyProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9905351F3A69B9003B6169 /* NAHStringPasswordKeyProviderTests.m */; };
+		BB9905381F3A6E07003B6169 /* NAHAESCryptoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9905371F3A6E07003B6169 /* NAHAESCryptoTests.m */; };
+		BB99053B1F3A6EE8003B6169 /* NAHAESCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = BB9905391F3A6EE8003B6169 /* NAHAESCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB99053C1F3A6EE8003B6169 /* NAHAESCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = BB99053A1F3A6EE8003B6169 /* NAHAESCrypto.m */; };
+		BB99053F1F3A7437003B6169 /* NAHEncryptedMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = BB99053D1F3A7437003B6169 /* NAHEncryptedMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB9905401F3A7437003B6169 /* NAHEncryptedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BB99053E1F3A7437003B6169 /* NAHEncryptedMessage.m */; };
 		BBEF59D91F31340000E3E84C /* NAHCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEF59CF1F31340000E3E84C /* NAHCrypto.framework */; };
-		BBEF59DE1F31340000E3E84C /* NAHCryptoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEF59DD1F31340000E3E84C /* NAHCryptoTests.m */; };
 		BBEF59E01F31340000E3E84C /* NAHCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = BBEF59D21F31340000E3E84C /* NAHCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBF9171A1F313AAE006FE52A /* NAHCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF917191F313AAE006FE52A /* NAHCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBF9171C1F33DB12006FE52A /* NAHKeyProviding.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF9171B1F33DB12006FE52A /* NAHKeyProviding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BBF9171F1F33DD29006FE52A /* NAHAESCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF9171D1F33DD29006FE52A /* NAHAESCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBF9171F1F33DD29006FE52A /* NAHAESCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF9171D1F33DD29006FE52A /* NAHAESCryptor.h */; };
 		BBF917201F33DD29006FE52A /* NAHAESCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF9171E1F33DD29006FE52A /* NAHAESCryptor.m */; };
 /* End PBXBuildFile section */
 
@@ -32,16 +38,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB0AB4911F3918C6003D26DF /* NAHInitializationVectorGenerating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHInitializationVectorGenerating.h; sourceTree = "<group>"; };
-		BB0AB4931F39194D003D26DF /* NAHRandomInitializationVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHRandomInitializationVector.h; sourceTree = "<group>"; };
-		BB0AB4941F39194D003D26DF /* NAHRandomInitializationVector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHRandomInitializationVector.m; sourceTree = "<group>"; };
+		BB0AB4911F3918C6003D26DF /* NAHIVGenerating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHIVGenerating.h; sourceTree = "<group>"; };
+		BB0AB4931F39194D003D26DF /* NAHRandomIVGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHRandomIVGenerator.h; sourceTree = "<group>"; };
+		BB0AB4941F39194D003D26DF /* NAHRandomIVGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHRandomIVGenerator.m; sourceTree = "<group>"; };
 		BB41DC331F392228007CA519 /* NAHStringPasswordKeyProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHStringPasswordKeyProvider.h; sourceTree = "<group>"; };
 		BB41DC341F392228007CA519 /* NAHStringPasswordKeyProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHStringPasswordKeyProvider.m; sourceTree = "<group>"; };
+		BB9905331F3A64DC003B6169 /* NAHRandomIVGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHRandomIVGeneratorTests.m; sourceTree = "<group>"; };
+		BB9905351F3A69B9003B6169 /* NAHStringPasswordKeyProviderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHStringPasswordKeyProviderTests.m; sourceTree = "<group>"; };
+		BB9905371F3A6E07003B6169 /* NAHAESCryptoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHAESCryptoTests.m; sourceTree = "<group>"; };
+		BB9905391F3A6EE8003B6169 /* NAHAESCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHAESCrypto.h; sourceTree = "<group>"; };
+		BB99053A1F3A6EE8003B6169 /* NAHAESCrypto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHAESCrypto.m; sourceTree = "<group>"; };
+		BB99053D1F3A7437003B6169 /* NAHEncryptedMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHEncryptedMessage.h; sourceTree = "<group>"; };
+		BB99053E1F3A7437003B6169 /* NAHEncryptedMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHEncryptedMessage.m; sourceTree = "<group>"; };
 		BBEF59CF1F31340000E3E84C /* NAHCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NAHCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEF59D21F31340000E3E84C /* NAHCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHCrypto.h; sourceTree = "<group>"; };
 		BBEF59D31F31340000E3E84C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBEF59D81F31340000E3E84C /* NAHCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NAHCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBEF59DD1F31340000E3E84C /* NAHCryptoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAHCryptoTests.m; sourceTree = "<group>"; };
 		BBEF59DF1F31340000E3E84C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBF917191F313AAE006FE52A /* NAHCryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHCryptor.h; sourceTree = "<group>"; };
 		BBF9171B1F33DB12006FE52A /* NAHKeyProviding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAHKeyProviding.h; sourceTree = "<group>"; };
@@ -81,8 +93,8 @@
 			children = (
 				BBF9171D1F33DD29006FE52A /* NAHAESCryptor.h */,
 				BBF9171E1F33DD29006FE52A /* NAHAESCryptor.m */,
-				BB0AB4931F39194D003D26DF /* NAHRandomInitializationVector.h */,
-				BB0AB4941F39194D003D26DF /* NAHRandomInitializationVector.m */,
+				BB0AB4931F39194D003D26DF /* NAHRandomIVGenerator.h */,
+				BB0AB4941F39194D003D26DF /* NAHRandomIVGenerator.m */,
 				BB41DC331F392228007CA519 /* NAHStringPasswordKeyProvider.h */,
 				BB41DC341F392228007CA519 /* NAHStringPasswordKeyProvider.m */,
 			);
@@ -111,9 +123,13 @@
 			isa = PBXGroup;
 			children = (
 				BB0AB4901F391850003D26DF /* Concrete */,
+				BB9905391F3A6EE8003B6169 /* NAHAESCrypto.h */,
+				BB99053A1F3A6EE8003B6169 /* NAHAESCrypto.m */,
 				BBEF59D21F31340000E3E84C /* NAHCrypto.h */,
 				BBF917191F313AAE006FE52A /* NAHCryptor.h */,
-				BB0AB4911F3918C6003D26DF /* NAHInitializationVectorGenerating.h */,
+				BB99053D1F3A7437003B6169 /* NAHEncryptedMessage.h */,
+				BB99053E1F3A7437003B6169 /* NAHEncryptedMessage.m */,
+				BB0AB4911F3918C6003D26DF /* NAHIVGenerating.h */,
 				BBF9171B1F33DB12006FE52A /* NAHKeyProviding.h */,
 				BB0AB48F1F391814003D26DF /* Supporting Files */,
 			);
@@ -123,8 +139,10 @@
 		BBEF59DC1F31340000E3E84C /* NAHCryptoTests */ = {
 			isa = PBXGroup;
 			children = (
-				BBEF59DD1F31340000E3E84C /* NAHCryptoTests.m */,
 				BBEF59DF1F31340000E3E84C /* Info.plist */,
+				BB9905331F3A64DC003B6169 /* NAHRandomIVGeneratorTests.m */,
+				BB9905351F3A69B9003B6169 /* NAHStringPasswordKeyProviderTests.m */,
+				BB9905371F3A6E07003B6169 /* NAHAESCryptoTests.m */,
 			);
 			path = NAHCryptoTests;
 			sourceTree = "<group>";
@@ -138,10 +156,12 @@
 			files = (
 				BBEF59E01F31340000E3E84C /* NAHCrypto.h in Headers */,
 				BBF9171F1F33DD29006FE52A /* NAHAESCryptor.h in Headers */,
+				BB99053F1F3A7437003B6169 /* NAHEncryptedMessage.h in Headers */,
 				BBF9171C1F33DB12006FE52A /* NAHKeyProviding.h in Headers */,
 				BBF9171A1F313AAE006FE52A /* NAHCryptor.h in Headers */,
-				BB0AB4951F39194D003D26DF /* NAHRandomInitializationVector.h in Headers */,
-				BB0AB4921F3918C6003D26DF /* NAHInitializationVectorGenerating.h in Headers */,
+				BB0AB4951F39194D003D26DF /* NAHRandomIVGenerator.h in Headers */,
+				BB99053B1F3A6EE8003B6169 /* NAHAESCrypto.h in Headers */,
+				BB0AB4921F3918C6003D26DF /* NAHIVGenerating.h in Headers */,
 				BB41DC351F392228007CA519 /* NAHStringPasswordKeyProvider.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +264,9 @@
 			files = (
 				BB41DC361F392228007CA519 /* NAHStringPasswordKeyProvider.m in Sources */,
 				BBF917201F33DD29006FE52A /* NAHAESCryptor.m in Sources */,
-				BB0AB4961F39194D003D26DF /* NAHRandomInitializationVector.m in Sources */,
+				BB99053C1F3A6EE8003B6169 /* NAHAESCrypto.m in Sources */,
+				BB0AB4961F39194D003D26DF /* NAHRandomIVGenerator.m in Sources */,
+				BB9905401F3A7437003B6169 /* NAHEncryptedMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBEF59DE1F31340000E3E84C /* NAHCryptoTests.m in Sources */,
+				BB9905361F3A69B9003B6169 /* NAHStringPasswordKeyProviderTests.m in Sources */,
+				BB9905341F3A64DC003B6169 /* NAHRandomIVGeneratorTests.m in Sources */,
+				BB9905381F3A6E07003B6169 /* NAHAESCryptoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

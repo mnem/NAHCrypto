@@ -6,16 +6,16 @@
 //  Copyright © 2017 David Wagner. All rights reserved.
 //
 
-#import "NAHRandomInitializationVector.h"
+#import "NAHRandomIVGenerator.h"
 
 #import <CommonCrypto/CommonCrypto.h>
 
 
-@interface NAHRandomInitializationVector ()
+@interface NAHRandomIVGenerator ()
 @property (nonatomic, readonly) NSUInteger vectorByteLength;
 @end
 
-@implementation NAHRandomInitializationVector
+@implementation NAHRandomIVGenerator
 
 - (instancetype)initWithVectorByteLength:(NSUInteger)vectorByteLength
 {
@@ -48,6 +48,11 @@
         }
         return nil;
     }
+}
+
+- (NSString *)debugDescription
+{
+    return [NSString stringWithFormat:@"<[NAHRandomIVGenerator] vectorByteLength: %lu>", self.vectorByteLength];
 }
 
 @end

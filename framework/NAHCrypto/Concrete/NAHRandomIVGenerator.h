@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NAHInitializationVectorGenerating.h"
+#import "NAHIVGenerating.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NAHRandomInitializationVector : NSObject <NAHInitializationVectorGenerating>
+@interface NAHRandomIVGenerator : NSObject <NAHIVGenerating>
 
 - (instancetype)init NS_UNAVAILABLE;
 

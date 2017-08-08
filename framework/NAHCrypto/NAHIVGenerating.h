@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol NAHInitializationVectorGenerating <NSObject>
+@protocol NAHIVGenerating <NSObject>
 
 - (nullable NSData *)generateWithError:(NSError **)error;
 

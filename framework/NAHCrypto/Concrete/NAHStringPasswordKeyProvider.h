@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithPassword:(NSString *)password salt:(NSData *)salt keySize:(NSUInteger)keySize;
+- (instancetype)initWithPassword:(NSString *)password salt:(NSData *)salt keyLength:(NSUInteger)keySize;
 
 @end
 

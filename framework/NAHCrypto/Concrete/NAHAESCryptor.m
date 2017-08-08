@@ -11,13 +11,13 @@
 
 @interface NAHAESCryptor ()
 @property (nonatomic) id<NAHKeyProviding>keyProvider;
-@property (nonatomic) id<NAHInitializationVectorGenerating>ivGenerator;
+@property (nonatomic) id<NAHIVGenerating>ivGenerator;
 @end
 
 
 @implementation NAHAESCryptor
 
-- (instancetype)initWithKeyProvider:(id<NAHKeyProviding>)keyProvider initializationVectorGenerator:(id<NAHInitializationVectorGenerating>)ivGenerator
+- (instancetype)initWithKeyProvider:(id<NAHKeyProviding>)keyProvider initializationVectorGenerator:(id<NAHIVGenerating>)ivGenerator
 {
     self = [super init];
     if (self) {
@@ -27,31 +27,25 @@
     return self;
 }
 
-- (nullable NSData *)decrypt:(nonnull NSData *)encryptedData error:(NSError * _Nullable __autoreleasing * _Nullable)error
+- (nullable NSData *)decrypt:(nonnull NAHEncryptedMessage *)encryptedMessage error:(NSError * _Nullable __autoreleasing * _Nullable)error
 {
     if (error != NULL) {
         *error = nil;
     }
     
-    NSMutableData *outData = [NSMutableData dataWithLength:encryptedData.length + kCCBlockSizeAES128];
+    NSMutableData *outData = [NSMutableData dataWithLength:encryptedMessage.encryptedData.length + kCCBlockSizeAES128];
     
     [self.keyProvider provideKeyInBlock:^(NSData * _Nullable key, NSError * _Nullable error) {
         NSAssert(error == nil, @"Error getting key");
         NSAssert(key != nil, @"Key cannot be nil");
-        
-        NSError *generateIVError = nil;
-        NSData *iv = [self.ivGenerator generateWithError:&generateIVError];
-        NSAssert(generateIVError == nil, @"Could not generate IV");
-        NSAssert(iv != nil, @"IV cannot be nil");
-        NSAssert(iv.length == kCCBlockSizeAES128, @"IV is the wrong length");
         
         size_t outDataSize = 0;
         CCCryptorStatus result = CCCrypt(kCCDecrypt,
                                          kCCAlgorithmAES,
                                          kCCOptionPKCS7Padding,
                                          key.bytes, key.length,
-                                         iv.bytes,
-                                         encryptedData.bytes, encryptedData.length,
+                                         encryptedMessage.iv.bytes,
+                                         encryptedMessage.encryptedData.bytes, encryptedMessage.encryptedData.length,
                                          outData.mutableBytes, outData.length,
                                          &outDataSize);
         NSAssert(result == kCCSuccess, @"Operation failed");
@@ -61,17 +55,19 @@
     return [outData copy];
 }
 
-- (nullable NSData *)encrypt:(nonnull NSData *)clearData error:(NSError * _Nullable __autoreleasing * _Nullable)error
+- (nullable NAHEncryptedMessage *)encrypt:(nonnull NSData *)clearData error:(NSError * _Nullable __autoreleasing * _Nullable)error
 {
     if (error != NULL) {
         *error = nil;
     }
     
-    NSMutableData *outData = [NSMutableData dataWithLength:clearData.length + kCCBlockSizeAES128];
+    __block NAHEncryptedMessage *encryptedMessage = nil;
     
     [self.keyProvider provideKeyInBlock:^(NSData * _Nullable key, NSError * _Nullable error) {
         NSAssert(error == nil, @"Error getting key");
         NSAssert(key != nil, @"Key cannot be nil");
+        
+        NSMutableData *outData = [NSMutableData dataWithLength:clearData.length + kCCBlockSizeAES128];
         
         NSError *generateIVError = nil;
         NSData *iv = [self.ivGenerator generateWithError:&generateIVError];
@@ -90,9 +86,11 @@
                                          &outDataSize);
         NSAssert(result == kCCSuccess, @"Operation failed");
         outData.length = outDataSize;
+        
+        encryptedMessage = [[NAHEncryptedMessage alloc] initWithEncryptedData:outData iv:iv];
     }];
     
-    return [outData copy];
+    return encryptedMessage;
 }
 
 @end

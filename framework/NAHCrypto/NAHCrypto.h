@@ -15,10 +15,9 @@ FOUNDATION_EXPORT double NAHCryptoVersionNumber;
 FOUNDATION_EXPORT const unsigned char NAHCryptoVersionString[];
 
 #import <NAHCrypto/NAHCryptor.h>
-#import <NAHCrypto/NAHInitializationVectorGenerating.h>
+#import <NAHCrypto/NAHIVGenerating.h>
 #import <NAHCrypto/NAHKeyProviding.h>
 
-#import <NAHCrypto/NAHAESCryptor.h>
-#import <NAHCrypto/NAHRandomInitializationVector.h>
-#import <NAHCrypto/NAHStringPasswordKeyProvider.h>
+#import <NAHCrypto/NAHAESCrypto.h>
+#import <NAHCrypto/NAHEncryptedMessage.h>
 

@@ -15,7 +15,7 @@
 
 @implementation NAHStringPasswordKeyProvider
 
-- (instancetype)initWithPassword:(NSString *)password salt:(NSData *)salt keySize:(NSUInteger)keySize
+- (instancetype)initWithPassword:(NSString *)password salt:(NSData *)salt keyLength:(NSUInteger)keySize
 {
     NSAssert(salt.length > 0, @"Salt length must not be zero");
     
@@ -40,6 +40,11 @@
 
 - (void)provideKeyInBlock:(nonnull NAHKeyProviderBlock)block {
     block(self.derivedKey, nil);
+}
+
+- (NSString *)debugDescription
+{
+    return [NSString stringWithFormat:@"<[NAHStringPasswordKeyProvider] derivedKey: %@>", self.derivedKey];
 }
 
 @end
